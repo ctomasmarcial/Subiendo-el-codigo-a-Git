@@ -1,0 +1,19 @@
+import random
+while True:
+    word = input("Escribe una palabra que no entiendas (En mayúsculas): ")
+    meme_dict = {
+        "LOL": "una respuesta a algo gracioso",
+        "CRINGE": "algo raro o embarazoso",
+        "ROFL": "una respuesta a una broma",
+        "SHEESH": "ligera desaprobación",
+        "CREEPY": "aterrador, siniestro",
+        "AGGRO": "ponerse agresivo/enojado",
+        "CAUSA": "decirle amigo a alguien",
+        "MANO": "abreviación de hermano"
+    }
+    
+    if word in meme_dict.keys():
+        print(word, ":", meme_dict[word])
+    else:
+        suggestion = random.choice(list(meme_dict.keys()))
+        print(f"No conozco '{word}', pero ¿qué tal si te explico el significado de '{suggestion}'?:", meme_dict[suggestion])
